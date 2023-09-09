@@ -1,0 +1,78 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle,white,yellow);
+}
+
+.my-heading{
+    color: red;
+    position: absolute;
+    top: 310px;
+    opacity: 0.6;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-image: url(./clock-template.png);
+    background-position: center;
+    background-size: cover;   
+}
+
+.hours-needle{
+    width: 80px;
+    height: 4px;
+    transform-origin: left;
+    background-color: red;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 50%;
+    animation: subash 86400s steps(86400,end) 0s infinite;
+}
+
+.minutes-needle{
+    width: 100px;
+    height: 4px;
+    transform-origin: left;
+    background-color: green;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 50%;
+    animation: subash 3600s steps(3600,end) 0s infinite;
+}
+
+.seconds-needle{
+    width: 120px;
+    height: 4px;
+    transform-origin: left;
+    background-color: blue;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 50%;
+    animation: subash 60s steps(60,end) 0s infinite;
+}
+
+@keyframes subash{
+
+    0%{
+        transform: rotate(-90deg);
+    }
+
+    100%{
+        transform: rotate(450deg);
+    }
+}
